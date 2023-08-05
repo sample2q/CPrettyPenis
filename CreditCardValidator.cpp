@@ -12,21 +12,7 @@ int NumberOfCharactars(long long int CardNumberInput) {
 			CardNumberInput = CardNumberInput / 10;
 		}
 	}
-	if (pointer == 15) {
-
-		return pointer;
-
-	}
-	else if (pointer == 16) {
-
-		return pointer;
-
-	}
-	else {
-
-		return pointer;
-	}
-	
+	return pointer;
 }
 
 int Checksum(long long int CardNumberInput) {
@@ -90,6 +76,7 @@ int LuhnAlgoOdd(long long int ReversedCard) {
 	int sum{ 0 }, newVariable, TempVariable(ReversedCard % 10 ), TempVariable2;
 	for (ReversedCard; ReversedCard > 0;) {
 
+		
 
 		if ((TempVariable * 2) > 10) {
 			TempVariable2 = TempVariable % 10 + (TempVariable / 10) % 10;
@@ -162,8 +149,9 @@ int main() {
 		cout << "Error! Check details" << endl;
 	};
 
-
+	/*   DEBUGGING:
 	cout << "Checksum: " << checksum<<endl;
 	cout << "Reversed Card: " << ReversedCard << endl;
 	cout << "Algo : " << LuhnAlgoOdd(ReversedCard) << endl;
-}
+	*/
+	}
